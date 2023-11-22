@@ -1,0 +1,7 @@
+<div id="<%= dom_id post %>">
+  <% if !browser.device.mobile? %> 
+    <%= image_tag(post.image, class:"solo-image border rounded shadow")%>
+  <%else%>
+    <%= image_tag(post.image, class:"w-100 h-100")%>
+  <%end%>
+</div>

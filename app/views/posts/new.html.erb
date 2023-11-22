@@ -15,21 +15,15 @@
     <%= image_tag "stickers/16.webp", class: "i n14" %>
     <%= image_tag "stickers/17.webp", class: "i n15" %>
 </header>
-
+ 
 <div class="my-container">
-    <h1 class="display-2">Benvenuta</h1>
-    <span class="">Divertiti a guardare l'album più bello(forse) di sempre❤️</span>
-    <br>
-    <br>
-    <span class="">Potrai creare tutti gli album che vuoi, dovrai rifare un nuovo utente ogni volta🙃</span>
-    <br><br>
-    <span class="">Si l'ho programmato male lo so.</span>
-    <br>
-    <br>
-    <span class="">Si si, so anche che è brutto, non sono bravo nel design🥲</span><br><br>
-    <%= image_tag "stickers/login-img.jpeg", class: "border rounded shadow w-100", style:"height: 42vh;" %>
-    <br>
-    <br>
-    <%= button_to "Entra a tuo rischio e pericolo", new_user_session_path, class:"btn btn-primary"%>
-</div>
+  <h1>Aggiungi foto</h1>
+  <br>
+  <%= render "form", post: @post, button_name: "Crea" %>
 
+  <br>
+  <div>
+    <%= link_to "Back", posts_path %>
+  </div>
+
+</div>

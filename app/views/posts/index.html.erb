@@ -1,0 +1,47 @@
+<p style="display:none;" class="fade-out"><%= notice %></p>
+  <br><br>
+  <div class="container w-100" style="top:50px">
+    <% if current_user.email == "ilnostroalbum@gmail.com" %>
+      <span class="display-2">Il nostro album dei ricordi finora❤️</span>
+    <%else %>
+      <span class="display-2">Il tuo album</span>
+    <%end%>
+    <br><br><br>
+    <% @posts.each do |post| %>
+      <div class="mobile-card border rounded shadow p-3">
+        <span class="display-5"><%= post.comment %></span>
+        <br><br>
+        <div class="d-flex w-100 justify-content-center">
+          <%= image_tag(post.image, class: "solo-image rounded shadow")%>
+        </div>
+        <br>
+        <div class="d-flex w-100 justify-content-center">
+          <%= link_to "Visualizza foto", post, class: "btn btn-secondary"%>
+        </div>
+      </div>
+      <br>
+    <%end%>
+    <% if current_user.email == "ilnostroalbum@gmail.com" %>
+      <span class="display-2">Ti amo tanto❤️</span><br><br>
+      <span class="display-2">Tantissimo</span><br><br>
+      <span class="display-2">Ma davvero tanto</span><br><br>
+      <span class="display-2">No di più io</span><br><br>
+      <span class="display-2">All'infinito proprio</span><br><br>
+      <span class="display-2">Infinito dell'infinito</span><br><br>
+      <span class="display-2">Non hai idea di quanto</span><br><br>
+      <span class="display-2">Impossibile</span><br><br>
+      <span class="display-2">E' un casino</span><br><br>
+      <span class="display-2">Come si fa?</span><br><br>
+      <span class="display-2">Non lo so</span><br><br>
+      <span class="display-2">So solo che voglio aggiungere 1000 altre foto😘❤️</span><br><br>
+      <span class="display-2">tal❤️</span><br><br>
+
+    <%else %>
+      <span class="display-2">Fine</span>
+    <%end%>
+  </div>
+<div class="abs-btn">
+  <%= link_to "Aggiungi Foto", new_post_path, class: "btn btn-primary", style: "margin-right: 5px;" %>
+  <%= link_to "Esci", destroy_user_session_path, class: "btn btn-secondary" %>
+</div>
+

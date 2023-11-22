@@ -1,0 +1,30 @@
+<p style="color: green" class="fade-out"><%= notice %></p>
+
+<% if browser.device.mobile? %>
+
+  <div class="container">
+    <span class="display-4"><%= @post.comment %> </span>
+    <br><br>
+    <%= render @post %>
+    <br>
+    <div class="d-flex w-100 justify-content-center">
+      <%= link_to "Modifica", edit_post_path(@post), class: "m-2 btn btn-primary" %>
+      <%= button_to "Elimina", @post, method: :delete, class: "m-2 btn btn-danger"%>
+      <%= link_to "Back", posts_path, class: "btn m-2 btn-secondary"%>
+    </div>
+  </div>
+
+<%else%>
+
+  <div class="container">
+    <div class="d-flex w-100 justify-content-center align-items-center">
+      <span class="display-4 float-left w-100"><%= @post.comment %> </span>
+      <%= link_to "Modifica", edit_post_path(@post), class: "float-right m-3 btn btn-primary" %>
+      <%= button_to "Elimina", @post, method: :delete, class: "float-right m-3 btn btn-danger"%>
+      <%= link_to "Back", posts_path, class: "float-right btn m-3 btn-secondary"%>
+    </div>
+    <br>
+    <div class="d-flex justify-content-center align-items-center"><%= render @post %></div>
+  </div>
+
+<%end%>
