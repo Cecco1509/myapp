@@ -13,3 +13,160 @@
  *= require_tree .
  *= require_self
  */
+
+ .body{
+    min-height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    background-color: white !important;
+ }
+ 
+ .my-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 30vw;
+    height: auto;
+    padding:5vh;
+    z-index: 2;
+    background-color: rgba(145, 145, 145, 0.067);
+    backdrop-filter: blur(5px);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+ }
+ 
+ .fade-out{
+    animation: fade-out 5s ease-in-out forwards;
+ }
+ 
+ header{
+    min-height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+ }
+ .i{
+     
+     display: inline-flex;
+     width: 6%;
+     animation: anim 10s ease-in-out infinite;
+     transform:  translateY(-120%) rotate(0deg);
+ 
+ }
+ .n1{
+      animation-delay: 0.1s;
+ }
+ .n2{
+     animation-delay: 6s;
+ }
+ .n3{
+     animation-delay: 4.3s;
+ }
+ .n4{
+     animation-delay: 1.4s;
+ }
+ .n5{
+     animation-delay: 5s;
+ }
+ .n6{
+     animation-delay: 2.6s;	
+ }
+ .n7{
+     animation-delay: 4s;
+ }
+ .n8{
+    animation-delay: 1.5s;
+ }
+ .n9{
+    animation-delay: 4.5s;
+ }
+ .n10{
+    animation-delay: 0.4s;
+ }
+ .n11{
+    animation-delay: 5.0s;
+ }
+ .n12{
+    animation-delay: 4.7s;	
+ }
+ .n13{
+    animation-delay: 1.1s;
+ }
+ .n14{
+    animation-delay: 3.5s;
+ }
+ .n15{
+    animation-delay: 7s;
+ }
+ 
+ @keyframes anim{
+     0%{
+         transform:  translateY(-120%) rotate(0deg);
+     }
+     100%{
+         transform: translateY(320vh) rotate(-180deg);
+     }
+ }
+ 
+ @keyframes fade-out{
+     0%{
+         opacity: 100%;
+     }
+     100%{
+         opacity: 0%;
+     }
+ }
+ 
+ .carousel-size{
+    height: 85vh;
+    width: 85vw;
+ }
+ 
+ .post-image{
+    height: 75vh;
+    object-fit: scale-down;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.347);
+ }
+ 
+ .abs-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+ }
+ 
+ .abs-edit-profile-btn{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+ }
+ 
+ .solo-image{
+    max-width: 100%;
+    max-height: 80vh;
+ }
+ 
+ .mobile-card{
+    background-color: rgba(0, 0, 0, 0.111);
+    width: 100%;
+ }
+ 
+ @media screen and (max-width: 500px) { 
+   
+    .my-container{
+       top: 52%;
+       width: 95vw;
+       height: 90vh;
+       padding:5px;
+       z-index: 2;
+       background-color: rgba(145, 145, 145, 0.067);
+       backdrop-filter: blur(5px);
+       box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+ 
+    header{
+       display: none;
+    }
+    
+ } 
